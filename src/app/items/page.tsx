@@ -14,7 +14,7 @@ const ItemPage = async () => {
     );
 
     return (
-      <main className="p-8">
+      <main className="py-32">
         <h1 className="text-2xl font-bold mb-6">아이템 목록</h1>
         <div className="grid grid-cols-6 gap-6">
           {uniqueItems.map((item: Item) => (

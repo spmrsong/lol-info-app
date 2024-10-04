@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="kr">
-      <body className="font-sans antialiased pt-[150px] bg-black text-white">
+      <body className="font-sans antialiased  bg-black text-white">
         <Header />
         <main className="container mx-auto">{children}</main>
         <Footer />

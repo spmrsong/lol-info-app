@@ -49,7 +49,7 @@ const RotationPage = () => {
   );
 
   return (
-    <main className="p-8">
+    <main className="py-32">
       <h1 className="text-2xl font-bold mb-6">로테이션 챔피언</h1>
       <div className="grid grid-cols-5 gap-6">
         {championsInRotation.map(({ id, name, title }) => (

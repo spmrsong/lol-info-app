@@ -11,7 +11,7 @@ const ChampionPage = async () => {
     const champions = await fetchChampionList(version);
 
     return (
-      <main className="p-8">
+      <main className="py-32">
         <h1 className="text-2xl font-bold mb-6">챔피언 목록</h1>
         <div className="grid grid-cols-5 gap-6">
           {champions.map(({ id, name, title }) => (

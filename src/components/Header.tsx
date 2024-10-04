@@ -24,7 +24,7 @@ export default function Header() {
   }, [isDarkMode]);
 
   return (
-    <header className="bg-gray-800 py-4 fixed top-0 w-full z-10">
+    <header className="bg-gray-800 py-4 fixed top-0 w-full z-50">
       <nav className="container mx-auto flex justify-around">
         <Link href="/" className="hover:underline">
           홈
