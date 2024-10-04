@@ -26,7 +26,7 @@ const ChampionDetailPage = async ({ params }: Params) => {
     const championDetail = await fetchChampionDetail(params.id, version);
 
     return (
-      <main className="p-8">
+      <main className="py-32">
         <div className="flex flex-col items-center">
           <Image
             src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetail.id}_0.jpg`}
