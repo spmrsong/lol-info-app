@@ -1,5 +1,6 @@
 import { Item } from "@/types/Item";
 import { fetchLatestVersion, fetchItemList } from "@/utils/serverApi";
+import Image from "next/image";
 import React from "react";
 
 export const revalidate = 86400;
@@ -19,14 +20,16 @@ const ItemPage = async () => {
         <div className="grid grid-cols-6 gap-6">
           {uniqueItems.map((item: Item) => (
             <div key={item.id} className="border-2 rounded-lg p-4 shadow-md">
-              <img
+              <Image
                 src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/item/${item.image.full}`}
                 alt={item.name}
-                className="w-16 h-16 mb-4 mx-auto"
+                className="mb-4 mx-auto"
+                width={64}
+                height={64}
               />
               <h2 className="text-lg font-semibold text-center">{item.name}</h2>
               <p className="text-sm text-gray-500 text-center">
-                {extractKorean(item.plaintext) || ""}
+                {item.plaintext || ""}
               </p>
             </div>
           ))}
@@ -41,11 +44,5 @@ const ItemPage = async () => {
     );
   }
 };
-
-// 한글만 추출하는 함수
-function extractKorean(text: string | undefined): string {
-  if (!text) return "";
-  return text.replace(/[^가-힣\s]/g, "").trim();
-}
 
 export default ItemPage;
