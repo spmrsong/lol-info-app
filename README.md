@@ -1,5 +1,9 @@
-LoL Info App 
+LoL Info App
+
 배포 url : https://lol-info-app-1st.vercel.app/
+
+![image](https://github.com/user-attachments/assets/51dc802a-2cd2-4768-9429-3ec1bbe5e2dd)
+
 
 리그 오브 레전드의 최신 정보를 제공하는 앱입니다. 챔피언, 아이템, 챔피언 로테이션 정보를 확인하세요.
 
