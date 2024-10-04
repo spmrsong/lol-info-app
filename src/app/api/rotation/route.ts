@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { ChampionRotation } from "@/types/ChampionRotation";
 
-export async function GET(request: NextRequest) {
-  // NextRequest는 요청, 서버측 메서드 / NextResponse는 응답
-  const apiKey = process.env.RIOT_API_KEY; // 환경변수에서 api키 가져오기
+export async function GET() {
+  // 환경변수에서 API 키 가져오기
+  const apiKey = process.env.RIOT_API_KEY;
 
   if (!apiKey) {
     return NextResponse.json({ error: "API key is missing" }, { status: 500 });
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 
     const data: ChampionRotation = await res.json();
     return NextResponse.json(data);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "An error occurred while fetching the data" },
       { status: 500 }
